@@ -29,10 +29,12 @@ function displayResult(argPlayerMove, argComputerMove) {
   if (argPlayerMove == 'papier' && argComputerMove == 'kamień')
   {
     printMessage('Wygrywasz!');
+  }
 
     else if (argPlayerMove == 'papier' && argComputerMove == 'nożyce')
     {
       printMessage('Przegrywasz!');
+    }
 
       else if (argPlayerMove == 'nożyce' && argComputerMove == 'kamień')
       {
