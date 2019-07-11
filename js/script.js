@@ -12,7 +12,7 @@ function getMoveName(argMoveId) {
       return 'papier';
     }
   else if (argMoveId == 3) {
-        return 'nożyce';
+    return 'nożyce';
       }
     else {
     printMessage('Nie znam ruchu o id ' + argMoveId + '. Zakładam, że chodziło o "kamień".');
@@ -47,12 +47,7 @@ function displayResult(argPlayerMove, argComputerMove) {
   }
   printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove);
 }
-playerMove = argButtonName;
-randomNumber = Math.floor(Math.random() * 3 + 1);
-console.log('wylosowana liczba to: ' + randomNumber);
-computerMove = getMoveName(randomNumber);
-console.log('ruch komputera to: ' + computerMove);
-displayResult(playerMove, computerMove);
+
 
 var argButtonName, buttonRock, buttonPaper, buttonScissors;
 
@@ -62,6 +57,12 @@ var argButtonName, buttonRock, buttonPaper, buttonScissors;
 function buttonClicked(argButtonName) {
   clearMessages();
   console.log(argButtonName + ' został kliknięty');
+playerMove = argButtonName;
+randomNumber = Math.floor(Math.random() * 3 + 1);
+console.log('wylosowana liczba to: ' + randomNumber);
+computerMove = getMoveName(randomNumber);
+console.log('ruch komputera to: ' + computerMove);
+displayResult(playerMove, computerMove);
 }
 buttonRock = document.getElementById('button-rock');
 buttonRock.addEventListener('click', function(){ buttonClicked('kamień'); });
